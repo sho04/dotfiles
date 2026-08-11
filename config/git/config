@@ -1,0 +1,33 @@
+[include]
+	path = ~/.config/git/config.local
+
+[init]
+	defaultBranch = main
+
+[core]
+	editor = nvim
+	whitespace = trailing-space,space-before-tab
+
+[fetch]
+	prune = true
+	pruneTags = true
+
+[pull]
+	ff = only
+
+[push]
+	default = simple
+	autoSetupRemote = true
+
+[rebase]
+	autoStash = true
+
+[diff]
+	colorMoved = default
+
+[merge]
+	conflictStyle = zdiff3
+
+[rerere]
+	enabled = true
+	autoupdate = true

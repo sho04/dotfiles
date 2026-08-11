@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+readonly EXPLORER_EXE="/mnt/c/Windows/explorer.exe"
+[ -x "$EXPLORER_EXE" ] || {
+    printf 'win-explorer: %s is unavailable\n' "$EXPLORER_EXE" >&2
+    exit 1
+}
+
+exec "$EXPLORER_EXE" "$@"

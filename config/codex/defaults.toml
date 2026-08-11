@@ -1,0 +1,7 @@
+# Stable personal defaults merged into ~/.codex/config.toml by bootstrap.
+# Authentication, project trust, plugins, hooks, and runtime state stay local.
+model = "gpt-5.6-sol"
+model_reasoning_effort = "high"
+personality = "pragmatic"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+readonly CLIP_EXE="/mnt/c/Windows/System32/clip.exe"
+[ -x "$CLIP_EXE" ] || {
+    printf 'win-clip: %s is unavailable\n' "$CLIP_EXE" >&2
+    exit 1
+}
+
+exec "$CLIP_EXE"

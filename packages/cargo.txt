@@ -1,0 +1,3 @@
+# crate             version
+tree-sitter-cli     0.26.12
+zoxide              0.10.0

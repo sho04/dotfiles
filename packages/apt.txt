@@ -1,0 +1,26 @@
+# Linux/WSL system packages, including the Ubuntu-supported .NET SDK.
+# Node and Rust toolchains are managed separately below the apt layer.
+build-essential
+bat
+bubblewrap
+cmake
+curl
+direnv
+dotnet-sdk-10.0
+fd-find
+fzf
+git
+jq
+libclang-dev
+ninja-build
+ripgrep
+rustup
+shellcheck
+snapd
+tmux
+unzip
+wget
+zip
+
+# Ubuntu 26.04 currently packages tree-sitter-cli 0.25.x, but the Neovim 0.12
+# Treesitter rewrite requires 0.26.1+. A published release is pinned in cargo.txt.
