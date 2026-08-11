@@ -1,5 +1,3 @@
-# Merge tracked top-level scalar defaults into a Codex config while preserving
-# machine-local tables such as projects, marketplaces, plugins, and hook state.
 NR == FNR {
     if ($0 ~ /^[[:space:]]*#/ || $0 ~ /^[[:space:]]*$/) {
         next

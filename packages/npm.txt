@@ -1,3 +1,2 @@
-# Global tools installed into the active Linux NVM Node environment.
 @openai/codex@0.147.0
 opencode-ai@1.18.14

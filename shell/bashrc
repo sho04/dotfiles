@@ -1,7 +1,5 @@
 # shellcheck shell=bash
 
-# Environment variables and Linux-owned PATH entries are shared with login
-# shells. The bootstrap exposes this repository at ~/.config/dotfiles.
 if [ -r "$HOME/.config/dotfiles/shell/env.bash" ]; then
     source "$HOME/.config/dotfiles/shell/env.bash"
 fi
@@ -11,14 +9,12 @@ case $- in
     *) return ;;
 esac
 
-# History
 HISTCONTROL=ignoreboth:erasedups
 HISTSIZE=10000
 HISTFILESIZE=20000
 shopt -s histappend
 shopt -s checkwinsize
 
-# Complete commands using the system completion definitions when available.
 if ! shopt -oq posix; then
     if [ -r /usr/share/bash-completion/bash_completion ]; then
         source /usr/share/bash-completion/bash_completion
@@ -27,7 +23,6 @@ if ! shopt -oq posix; then
     fi
 fi
 
-# Linux Node environment. Windows Node/npm are intentionally not reused.
 export NVM_DIR="$HOME/.nvm"
 if [ -s "$NVM_DIR/nvm.sh" ]; then
     source "$NVM_DIR/nvm.sh"
@@ -36,7 +31,6 @@ if [ -s "$NVM_DIR/bash_completion" ]; then
     source "$NVM_DIR/bash_completion"
 fi
 
-# Directory navigation and per-project environment loading.
 if command -v zoxide >/dev/null 2>&1; then
     eval "$(zoxide init bash)"
 fi
@@ -44,7 +38,6 @@ if command -v direnv >/dev/null 2>&1; then
     eval "$(direnv hook bash)"
 fi
 
-# Familiar, deliberately small alias set.
 alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
@@ -53,7 +46,6 @@ alias grep='grep --color=auto'
 alias v='nvim'
 alias gs='git status --short --branch'
 
-# Ubuntu gives these packages collision-free executable names.
 if ! command -v fd >/dev/null 2>&1 && command -v fdfind >/dev/null 2>&1; then
     alias fd='fdfind'
 fi
@@ -61,8 +53,6 @@ if ! command -v bat >/dev/null 2>&1 && command -v batcat >/dev/null 2>&1; then
     alias bat='batcat'
 fi
 
-# A plain, high-contrast prompt stays readable across Windows Terminal, tmux,
-# bare terminals, and remote shells.
 if [ -n "${TERM:-}" ] && [ "$TERM" != "dumb" ]; then
     PS1='\[\e[1;92m\]\u@\h\[\e[0m\]:\[\e[1;96m\]\w\[\e[0m\]\$ '
 else

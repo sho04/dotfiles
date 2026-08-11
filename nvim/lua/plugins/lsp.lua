@@ -51,7 +51,6 @@ return {
 
 			vim.lsp.config("ruff", {
 				on_attach = function(client)
-					-- Pyright owns hover; Ruff owns linting and import actions.
 					client.server_capabilities.hoverProvider = false
 				end,
 			})

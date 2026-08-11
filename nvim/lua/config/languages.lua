@@ -22,8 +22,6 @@ return {
 		"yaml",
 	},
 
-	-- Mason owns editor-facing tools. Installation is explicit through
-	-- :MasonToolsInstall or the future bootstrap script, never on startup.
 	mason = {
 		"bash-language-server",
 		"clang-format",

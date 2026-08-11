@@ -1,6 +1,5 @@
 local group = vim.api.nvim_create_augroup("dotfiles", { clear = true })
 
--- Refresh buffers changed by formatters, Git operations, or other programs.
 vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold" }, {
 	group = group,
 	command = "silent! checktime",
@@ -11,8 +10,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	callback = function() vim.hl.on_yank({ timeout = 150 }) end,
 })
 
--- Web and configuration formats default to two spaces. EditorConfig may
--- override these buffer-local values after filetype detection.
 vim.api.nvim_create_autocmd("FileType", {
 	group = group,
 	pattern = {
@@ -55,7 +52,6 @@ vim.api.nvim_create_autocmd("TermOpen", {
 	end,
 })
 
--- Opening a directory behaves like a project browser; opening a file does not.
 vim.api.nvim_create_autocmd("VimEnter", {
 	group = group,
 	callback = function()

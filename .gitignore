@@ -1,21 +1,15 @@
-# Machine-local bootstrap input and overrides
 .env
 .env.local
 local.env
 *.local
 
-# Secrets and credentials never belong in this repository
 auth.json
 credentials
 credentials.*
 *.key
 *.pem
 
-# Operating-system noise
 .DS_Store
 Thumbs.db
 desktop.ini
 node_modules/
-
-# Neovim's lazy-lock.json is intentionally not ignored. It is part of the
-# reproducible configuration and should be committed after the first sync.

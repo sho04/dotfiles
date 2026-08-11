@@ -1,20 +1,17 @@
 local opt = vim.opt
 
--- Line numbers and navigation
 opt.number = true
 opt.relativenumber = true
 opt.cursorline = true
 opt.scrolloff = 8
 opt.sidescrolloff = 8
 
--- Indentation defaults; project EditorConfig files take precedence.
 opt.expandtab = true
 opt.shiftwidth = 4
 opt.softtabstop = 4
 opt.tabstop = 4
 opt.smartindent = true
 
--- Display
 opt.termguicolors = true
 opt.colorcolumn = "120"
 opt.signcolumn = "yes"
@@ -26,17 +23,14 @@ opt.ruler = false
 opt.showcmd = false
 opt.pumheight = 12
 
--- Windows and splits
 opt.splitbelow = true
 opt.splitright = true
 opt.equalalways = false
 
--- Search
 opt.ignorecase = true
 opt.smartcase = true
 opt.incsearch = true
 
--- Files, state, and responsiveness
 opt.autoread = true
 opt.backup = false
 opt.writebackup = false
@@ -46,16 +40,13 @@ opt.confirm = true
 opt.updatetime = 250
 opt.timeoutlen = 400
 
--- Input and integration
 opt.clipboard = "unnamedplus"
 opt.completeopt = { "menu", "menuone", "noselect" }
 opt.mouse = "a"
 
--- Treesitter-backed folds are available without closing files on startup.
 opt.foldlevel = 99
 opt.foldlevelstart = 99
 
--- This configuration does not use the legacy language providers.
 vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_python3_provider = 0

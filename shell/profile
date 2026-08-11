@@ -1,8 +1,6 @@
 # shellcheck shell=sh
 
 if [ -r "$HOME/.config/dotfiles/shell/env.bash" ]; then
-    # env.bash uses Bash arrays to deduplicate PATH, so only source it here
-    # when this login shell is Bash.
     if [ -n "${BASH_VERSION:-}" ]; then
         . "$HOME/.config/dotfiles/shell/env.bash"
     fi

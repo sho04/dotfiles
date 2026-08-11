@@ -7,7 +7,6 @@ return {
 		require("github-theme").setup({})
 		vim.cmd.colorscheme("github_dark_default")
 
-		-- Deliberately text-first, high-contrast signs with a subtle cursor row.
 		vim.api.nvim_set_hl(0, "CursorLine", { bg = "#161b22" })
 		vim.api.nvim_set_hl(0, "LineNr", { fg = "#484f58" })
 		vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#f0f6fc", bold = true })

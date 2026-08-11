@@ -21,8 +21,7 @@ Usage: ./bootstrap.sh [--check] [--apply] [--packages] [--wsl]
   --wsl        Configure WSL interop without importing the Windows PATH.
   --help       Show this message.
 
-The script never deletes conflicting files. Apply mode moves them beneath
-~/.local/state/dotfiles/backups before creating links.
+Conflicts are backed up under ~/.local/state/dotfiles/backups.
 EOF
 }
 
@@ -58,8 +57,6 @@ if "$INSTALL_PACKAGES" && [ "$MODE" != "apply" ]; then
     die "--packages must be combined with --apply"
 fi
 
-# These files contain assignments only and are controlled by the repository
-# owner. local.env is ignored by Git and may override identity values.
 # shellcheck disable=SC1090
 source "$VERSIONS_FILE"
 if [ -r "$LOCAL_ENV_FILE" ]; then
