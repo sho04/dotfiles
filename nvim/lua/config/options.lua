@@ -21,6 +21,10 @@ opt.signcolumn = "yes"
 opt.wrap = false
 opt.fillchars:append({ eob = " " })
 opt.laststatus = 3
+opt.showmode = false
+opt.ruler = false
+opt.showcmd = false
+opt.pumheight = 12
 
 -- Windows and splits
 opt.splitbelow = true

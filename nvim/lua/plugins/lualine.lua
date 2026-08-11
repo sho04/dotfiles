@@ -37,5 +37,23 @@ return {
 			lualine_y = {},
 			lualine_z = { "location" },
 		},
+		tabline = {
+			lualine_a = {
+				{
+					"buffers",
+					use_mode_colors = false,
+					buffers_color = {
+						active = { fg = "#f0f6fc", bg = "#161b22", gui = "bold" },
+						inactive = { fg = "#8b949e", bg = "#0d1117" },
+					},
+					symbols = { modified = " *", alternate_file = "", directory = "" },
+				},
+			},
+			lualine_b = {},
+			lualine_c = {},
+			lualine_x = {},
+			lualine_y = {},
+			lualine_z = {},
+		},
 	},
 }
