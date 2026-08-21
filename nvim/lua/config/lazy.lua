@@ -24,8 +24,9 @@ vim.opt.runtimepath:prepend(lazypath)
 require("lazy").setup({
 	spec = { { import = "plugins" } },
 	defaults = { lazy = true },
-	install = { colorscheme = { "github_dark_default" } },
+	install = { colorscheme = { "onedark_dark" } },
 	checker = { enabled = false },
+	rocks = { enabled = false },
 	change_detection = { notify = false },
 	ui = { border = "single" },
 })

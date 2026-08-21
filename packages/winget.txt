@@ -1,0 +1,14 @@
+# Package ID                        # Purpose
+Microsoft.PowerShell                # PowerShell 7
+Git.Git                             # Native Git
+Neovim.Neovim                       # Editor
+BurntSushi.ripgrep.MSVC             # Search
+sharkdp.fd                          # File finder
+junegunn.fzf                        # Fuzzy finder
+ajeetdsouza.zoxide                  # Directory navigation
+jqlang.jq                           # JSON processing
+Kitware.CMake                       # Build system
+Ninja-build.Ninja                   # Native builds
+LLVM.LLVM                           # Clang toolchain
+Rustlang.Rustup                     # Rust toolchain
+OpenJS.NodeJS                       # Node and npm

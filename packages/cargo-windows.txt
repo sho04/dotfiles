@@ -1,0 +1,3 @@
+# crate             version
+psmux               3.3.8
+tree-sitter-cli     0.26.12
