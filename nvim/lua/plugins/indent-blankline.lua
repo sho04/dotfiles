@@ -3,10 +3,10 @@ return {
 	main = "ibl",
 	event = { "BufReadPost", "BufNewFile" },
 	opts = {
-		indent = { char = "|" },
+		indent = { char = "│" },
 		scope = {
 			enabled = true,
-			char = "|",
+			char = "│",
 		},
 		exclude = {
 			filetypes = { "help", "lazy", "mason", "neo-tree", "terminal" },

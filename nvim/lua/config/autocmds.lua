@@ -64,6 +64,5 @@ vim.api.nvim_create_autocmd("VimEnter", {
 		vim.cmd.cd(vim.fn.fnameescape(directory))
 		vim.cmd.enew()
 		vim.api.nvim_buf_delete(directory_buffer, { force = true })
-		vim.cmd("Neotree show left")
 	end,
 })

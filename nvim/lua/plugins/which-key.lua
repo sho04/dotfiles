@@ -3,10 +3,7 @@ return {
 	event = "VeryLazy",
 	opts = {
 		icons = {
-			breadcrumb = ">",
-			group = "+",
-			separator = ">",
-			mappings = false,
+			mappings = true,
 		},
 		spec = {
 			{ "<leader>b", group = "Buffer" },
@@ -15,6 +12,7 @@ return {
 			{ "<leader>e", group = "Explorer" },
 			{ "<leader>f", group = "Find" },
 			{ "<leader>h", group = "Git hunk" },
+			{ "<leader>q", group = "Sessions" },
 			{ "<leader>r", group = "Refactor" },
 			{ "<leader>t", group = "Terminal/toggles" },
 			{ "<leader>w", group = "Window/workspace" },

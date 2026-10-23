@@ -13,9 +13,10 @@ end
 return {
 	"nvim-lualine/lualine.nvim",
 	event = "VeryLazy",
+	dependencies = { "nvim-tree/nvim-web-devicons" },
 	opts = {
 		options = {
-			icons_enabled = false,
+			icons_enabled = true,
 			theme = "auto",
 			component_separators = "",
 			section_separators = "",
@@ -25,7 +26,7 @@ return {
 		sections = {
 			lualine_a = { "mode" },
 			lualine_b = { "branch" },
-			lualine_c = { { "filename", path = 1 } },
+			lualine_c = { { "filename", path = 1 }, "diff" },
 			lualine_x = {
 				{
 					"diagnostics",
@@ -41,12 +42,14 @@ return {
 			lualine_a = {
 				{
 					"buffers",
+					show_filename_only = false,
+					max_length = function() return vim.o.columns end,
 					use_mode_colors = false,
 					buffers_color = {
 						active = { fg = "#f0f6fc", bg = "#161b22", gui = "bold" },
 						inactive = { fg = "#8b949e", bg = "#0d1117" },
 					},
-					symbols = { modified = " *", alternate_file = "", directory = "" },
+					symbols = { modified = " ●", alternate_file = "", directory = "" },
 				},
 			},
 			lualine_b = {},
